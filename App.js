@@ -180,22 +180,22 @@ export default function App() {
   return (
     <LinearGradient style={styles.container} colors={['#9fc5e8','#a8caea']}>
       {
-        show && <LinearGradient colors={['#635688','#7f6faf']} style={styles.showData}>
+        show && <LinearGradient colors={['#00203f','#193652']} style={styles.showData}>
         <Text style={styles.text} >Binary Equivalent {'\n\n'} <Text style={{fontSize: 20,paddingTop:15, color: 'yellow'}}>{binary}</Text></Text>
       </LinearGradient>}
       {
-      show && <LinearGradient colors={['#635688','#7f6faf']} style={styles.showData}>
+      show && <LinearGradient colors={['#00203f','#193652']} style={styles.showData}>
       <Text style={styles.text} >Octal Equivalent {'\n\n'} <Text style={{fontSize: 20,paddingTop:15, color: 'yellow'}}>{octal}</Text></Text>
     </LinearGradient>
       }
 
       {
-      show && <LinearGradient colors={['#635688','#7f6faf']} style={styles.showData}>
+      show && <LinearGradient colors={['#00203f','#193652']} style={styles.showData}>
       <Text style={styles.text} >Hexadecimal Equivalent {'\n\n'} <Text style={{fontSize: 20,paddingTop:15, color: 'yellow'}}>{hexa}</Text></Text>
     </LinearGradient>
       }
       {
-      show && <LinearGradient colors={['#635688','#7f6faf']} style={styles.showData}>
+      show && <LinearGradient colors={['#00203f','#193652']} style={styles.showData}>
       <Text style={styles.text} >Decimal {'\n\n'} <Text style={{fontSize: 20,paddingTop:15, color: 'yellow'}}>{decimal}</Text></Text>
     </LinearGradient>
       }
@@ -218,10 +218,13 @@ export default function App() {
         <View style={ {borderWidth: 1, 
             borderColor: 'gray',}}>
         <Picker
+          dropdownIconColor={'gray'}
+          mode={'dropdown'}
           style={{color: 'white'}}
           selectedValue={selectedValue}
           onValueChange={handlePickerChange}
         >
+          <Picker.Item label="Select Any" value={null} />
           <Picker.Item label="Decimal 10" value="10" />
           <Picker.Item label="Binary 2" value="2" />
           <Picker.Item label="Octal 8" value="8" />
